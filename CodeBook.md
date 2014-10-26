@@ -43,10 +43,18 @@ The rest of the unzipped files relate to one another in the following fashion:
 
 * the "test" and "train" directories and files have the same structure, and contain the two different partions of the data.  One of the goals of our analysis is to combined these back together within the one "tidy" data set.
 * The observations are provided by each line of data found in the partitioned ("test" or "train") subject, X_* and y_* text files.  These files have the same number of lines.  
-* The "features.txt" file provides a mapping of "feature columns" to "feature names".  The "feature column" values relatively coorespond to the data columns found in the X_*.txt files.  Thus, there are as many rows in the "features.txt" file, as columns found in X_*.txt files. The "feature names" are the metric variables which have been previously derived from the original raw data. I'm unsure of the unit types for these variables, and will not attempt to guess at them.  Normally, the CodeBook should include units in the variable description. 
+* The "features.txt" file provides a mapping of "feature columns" to "feature names".  The "feature column" values relatively coorespond to the data columns found in the X_*.txt files.  Thus, there are as many rows in the "features.txt" file, as columns found in X_*.txt files. The "feature names" are the metric variables which have been previously derived from the original raw data. 
 * The partitioned (test or train) "X_*.txt" file contains the observation values and each column is in relative order to the "feature columns" value from the "features.txt" data.
 * The "activity_labels.txt" file relates an "activity id number" (1-6) to an "activity description". The "activity" ids for each observation are found in the "y_*.txt" files.
 * The paritioned data "subject_*.txt" rows provide a "subject" number that is the source of each observation.  A subject is not further defined, and just serves to relate the data from the same source individual.
+
+# Data Units
+
+The feature data units reported in the Tidy data set are "mean" values and "standard deviation" values. Both "mean" and "std" have the same units.  Thus, for the sensors provided on Android phones, the accelerometer units are: 
+
+* mean: m/s^2^ (meters per second squared)
+* stddev: ms/s^2^ 
+
 
 # Summary Choices
 

@@ -96,10 +96,18 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <ul>
 <li>the “test” and “train” directories and files have the same structure, and contain the two different partions of the data. One of the goals of our analysis is to combined these back together within the one “tidy” data set.</li>
 <li>The observations are provided by each line of data found in the partitioned (“test” or “train”) subject, X_* and y_* text files. These files have the same number of lines.<br /></li>
-<li>The “features.txt” file provides a mapping of “feature columns” to “feature names”. The “feature column” values relatively coorespond to the data columns found in the X_<em>.txt files. Thus, there are as many rows in the “features.txt” file, as columns found in X_</em>.txt files. The “feature names” are the metric variables which have been previously derived from the original raw data. I’m unsure of the unit types for these variables, and will not attempt to guess at them. Normally, the CodeBook should include units in the variable description.</li>
+<li>The “features.txt” file provides a mapping of “feature columns” to “feature names”. The “feature column” values relatively coorespond to the data columns found in the X_<em>.txt files. Thus, there are as many rows in the “features.txt” file, as columns found in X_</em>.txt files. The “feature names” are the metric variables which have been previously derived from the original raw data.</li>
 <li>The partitioned (test or train) “X_*.txt&quot; file contains the observation values and each column is in relative order to the “feature columns” value from the “features.txt” data.</li>
 <li>The “activity_labels.txt” file relates an “activity id number” (1-6) to an “activity description”. The “activity” ids for each observation are found in the “y_*.txt&quot; files.</li>
 <li>The paritioned data “subject_*.txt&quot; rows provide a “subject” number that is the source of each observation. A subject is not further defined, and just serves to relate the data from the same source individual.</li>
+</ul>
+</div>
+<div id="data-units" class="section level1">
+<h1>Data Units</h1>
+<p>The feature data units reported in the Tidy data set are “mean” values and “standard deviation” values. Both “mean” and “std” have the same units. Thus, for the sensors provided on Android phones, the accelerometer units are:</p>
+<ul>
+<li>mean: m/s<sup>2</sup> (meters per second squared)</li>
+<li>stddev: ms/s<sup>2</sup></li>
 </ul>
 </div>
 <div id="summary-choices" class="section level1">
